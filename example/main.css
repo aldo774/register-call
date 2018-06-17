@@ -1,0 +1,173 @@
+body {
+  background: #F4F4F8;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: #778;
+  overflow: hidden;
+}
+
+.aside-person {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: table;
+  text-align: center;
+  background: #445;
+  color: #AAB;
+  box-shadow: 0px 5px 8px #445;
+  height: 100vh;
+  width: 250px;
+  overflow: auto;
+}
+
+.aside-person .aside-container {
+  padding: 20px;
+}
+
+.aside-person .aside-container div:hover h3{
+  transition: .5s;
+  color: #EEF;
+}
+
+.aside-person .aside-container div a:hover{
+  transition: .5s;
+  color: #DDE;
+}
+
+.person-photo {
+  margin: 0 auto;
+  width: 16vh;
+  height: 16vh;
+  border: 6px solid #FF0063;
+  background-color: #FFF;
+  border-radius: 100vh;
+}
+
+.person-photo > img{
+  display: block;
+  width: 100%;
+  width: 16vh;
+  height: 16vh;
+  border-radius: 100vh;
+}
+
+.search-info{
+  margin: 10px 0;
+}
+
+.search-info > span{
+  display: block;
+  width: 100%;
+}
+
+.search-info > span:first-child{
+  font-size: 20px;
+}
+
+.aside-person > .aside-container > div a{
+  display: block;
+  text-decoration: None;
+  color: #AAB;
+  padding: 5px 0;
+}
+
+.search-options h3{
+  margin: 12px 0;
+  transition: .5s
+}
+
+.separator{
+  padding: 10px 0;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #AAB;
+}
+
+.aside-config {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #AAB;
+  box-shadow: 0px 5px 8px #445;
+  height: 100vh;
+  width: 70px;
+  overflow: auto;
+}
+
+.aside-config .aside-container{
+  padding: 20px 0;
+}
+
+.aside-config .settings{
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 70%;
+}
+
+.aside-config .info{
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 70%;
+}
+
+.aside-config a > svg{
+  fill: #445;
+  transition: .2s;
+}
+
+.aside-config a:hover > svg{
+  fill: #DDE;
+  transition: .2s;
+}
+
+.container{
+  padding: 30px;
+  margin: 0 70px 0 250px;
+  background: #F4F4F8;
+  height: 100vh;
+  overflow: auto;
+}
+
+.title > h1{
+  margin: 0 0 20px 0;
+}
+
+.attendances > div{
+  display: table;
+  width: calc(100% - 200px);
+  padding: 18px 100px;
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.attendances > div > span{
+  display: block;
+  float: left;
+  width: 33%;
+}
+
+.attendances > div > span:last-child{
+  text-align: right
+}
+
+.attendances > .open-attendance{
+  background: #444;
+  color: #FFF;
+}
+
+.attendances > .close-attendance{
+  color: #444;
+  background: transparent;
+}
+
+.attendances > .open-attendance > span:nth-child(2)::before{
+  content: " ";
+  white-space: pre;
+}
+
+.attendances > .open-attendance > a > span:last-child{
+  background: #FF0063;
+  float: right;
+  height: 22px;
+  width: 22px;
+}
