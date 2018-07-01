@@ -1,9 +1,14 @@
 {
-  "name": "capy-attendances",
+  "name": "register-call",
   "version": "1.0.0",
   "description": "An interface to show attendances",
   "main": "index.js",
   "scripts": {
+    "build": "./node_modules/.bin/babel --out-dir lib src",
+    "build:watch": "npm run build -- --watch",
+    "build:umd": "./node_modules/.bin/webpack --output-filename register-call.umd.js",
+    "build:umd:min": "./node_modules/.bin/webpack --output-filename register-call.umd.min.js -p",
+    "build:all": "npm run build && npm run build:umd && npm run build:umd:min",
     "lint": "./node_modules/.bin/eslint src/*.js",
     "prepush": "npm run lint && npm test && npm run test:code-coverage",
     "start": "./node_modules/.bin/webpack-dev-server --open",
@@ -19,12 +24,12 @@
       "html"
     ],
     "exclude": [
-      "src/tests/**"
+      "tests/**"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/rodrigets/register_call/src/master/"
+    "url": "https://github.com/aldo774/register-call/src/master/"
   },
   "keywords": [
     "js",
@@ -32,8 +37,9 @@
   ],
   "author": "Aldo Soares <soares_aldo@hotmail.com>",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/rodrigets/register_call/src/master/README.md",
+  "homepage": "https://github.com/aldo774/register-call/src/master/README.md",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
@@ -52,5 +58,8 @@
     "webpack": "^4.3.0",
     "webpack-cli": "^2.0.13",
     "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {
+    "register-call-wrapper": "^0.1.1"
   }
 }
